@@ -5,8 +5,7 @@ import menuReducer from './menu/menu.reducer';
 
 const persistConfig = {
     key: 'root',
-    storage,
-    whitelist: ['menu']
+    storage
 };
 
 const rootReducer = combineReducers({

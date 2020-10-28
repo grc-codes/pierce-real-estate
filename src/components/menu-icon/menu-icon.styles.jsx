@@ -11,8 +11,8 @@ export const MenuIconContainer = styled.div`
 `;
 
 export const MenuIconImage = styled(MenuIconSVG)`
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     padding: 10px;
     cursor: pointer;
 `;

@@ -27,6 +27,11 @@ export const GlobalStyle = createGlobalStyle`
         display: block;
     }
 
+    * {
+        box-sizing: border-box;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+    }
+
     body {
         line-height: 1;
         margin: 0;
