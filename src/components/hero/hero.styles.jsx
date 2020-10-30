@@ -36,22 +36,30 @@ export const LeftArrowContainer = styled.div`
     width: 50px;
     height: 50px;
     position: absolute;
-    background: yellow;
+    background: #2A2A36;
     top: 50%;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    & .fas {
+        font-size: 3em;
+        color: #fff;
+    }
 `;
 
 export const RightArrowContainer = styled.div`
     width: 50px;
     height: 50px;
     position: absolute;
-    background: green;
+    background: #2A2A36;
     top: 50%;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    & .fas {
+        font-size: 3em;
+        color: #fff;
+    }
 `;

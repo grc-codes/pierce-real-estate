@@ -21,10 +21,10 @@ const Hero = () => (
                 </CityText>
             </HeroTextContainer>
             <LeftArrowContainer>
-                L
+                <i className='fas fa-caret-left'></i>
             </LeftArrowContainer>
             <RightArrowContainer>
-                R
+                <i className='fas fa-caret-right'></i>
             </RightArrowContainer>
         </HeroImageContainer>
     </HeroContainer>

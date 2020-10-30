@@ -2,7 +2,6 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import HomePage from './pages/homepage/homepage.component';
-import ServicesPage from './pages/services/services.component';
 import ListingsPage from './pages/listings/listings.component';
 import AgentsPage from './pages/agents/agents.component';
 import AboutPage from './pages/about/about.component';
@@ -11,6 +10,7 @@ import { GlobalStyle } from './global.styles';
 import { selectMobileMenuHidden } from './redux/menu/menu.selectors';
 import { createStructuredSelector } from 'reselect';
 import { toggleMobileMenuHidden } from './redux/menu/menu.actions';
+import Footer from './components/footer/footer.component';
 
 class App extends React.Component {
 
@@ -34,6 +34,7 @@ class App extends React.Component {
           <Route exact path='/agents' component={AgentsPage} />
           <Route exact path='/about' component={AboutPage} />
         </Switch>
+        <Footer />
       </div>
     );
   };

@@ -13,9 +13,6 @@ const MobileMenu = ({ toggleMobileMenuHidden }) => (
             <OptionLink to='/' onClick={toggleMobileMenuHidden}>
                 HOME
             </OptionLink>
-            <OptionLink to='/services' onClick={toggleMobileMenuHidden}>
-                SERVICES
-            </OptionLink>
             <OptionLink to='/listings' onClick={toggleMobileMenuHidden}>
                 SEARCH
             </OptionLink>
