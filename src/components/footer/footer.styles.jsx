@@ -8,6 +8,7 @@ export const FooterContainer = styled.div`
     width: 100%;
     flex-direction: column;
     align-items: center;
+
 `;
 
 export const HR = styled.hr`
@@ -20,8 +21,7 @@ export const FooterTestimonialsContainer = styled.div`
     width: 100%;
     display: flex;
     padding: 0 20px;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 8.3em;
 `;
 
@@ -30,27 +30,33 @@ export const FooterTestimonialsTitle = styled.h3`
     color: #232323;
     font-size: 1.4em;
     text-align: center;
-    margin: 1.5em 0;
+    margin: 0 0 1.5em 0;
     font-weight: 500;
     text-transform: uppercase;
+    width: 100%;
+    padding-top: 1.5em;
+    border-top: 4px solid #dfdfdf;
 `;
 
 export const FooterTestimonialsText = styled.p`
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    font-size: .9em;
     color: #232323;
     text-align: center;
     line-height: 1.5em;
-    width: 90%;
+    width: 100%;
+    padding: 0 10px;
 `;
 
 export const FooterTestimonialsSpan = styled.span`
     font-family: 'Roboto', sans-serif;
-    font-size: .9em;
+    font-size: .8em;
     margin-top: 1em;
     color: #232323;
     text-align: center;
     font-weight: 300;
+    width: 100%;
+    padding: 0 10px;
 `;
 
 export const AppStoresContainer = styled.div`
@@ -61,6 +67,8 @@ export const AppStoresContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+
+    overflow: hidden;
 `;
 
 export const AppStoreIconContainer = styled.div`
@@ -70,6 +78,7 @@ export const AppStoreIconContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 2em;
+    padding: 10px;
 `;
 
 export const PlayStoreIconContainer = styled.div`
@@ -79,14 +88,15 @@ export const PlayStoreIconContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-left: 2em;
+    padding: 10px;
 `;
 
 
 export const SocialContainer = styled.div`
-    width: 80%;
+    width: 100%;
     border-bottom: 1px solid #dfdfdf;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px 0;
     & .fab {

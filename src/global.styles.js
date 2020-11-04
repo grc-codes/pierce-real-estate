@@ -29,8 +29,6 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         box-sizing: border-box;
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap');
-        overflow-y: scroll;
     }
 
     body {

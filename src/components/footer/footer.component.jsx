@@ -19,7 +19,6 @@ import { ReactComponent as PlayStore } from '../../assets/google-play-5.svg';
 
 const Footer = () => (
     <FooterContainer>
-        <HR />
         <FooterTestimonialsContainer>
             <FooterTestimonialsTitle>
                 Home Buyer Testimonials

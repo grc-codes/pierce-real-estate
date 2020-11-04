@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import HomePage from './pages/homepage/homepage.component';
-import ListingsPage from './pages/listings/listings.component';
+import SearchPage from './pages/search/search.component';
 import AgentsPage from './pages/agents/agents.component';
 import AboutPage from './pages/about/about.component';
 import Header from './components/header/header.component';
@@ -30,7 +30,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route path='/listings' component={ListingsPage} />
+          <Route path='/search' component={SearchPage} />
           <Route exact path='/agents' component={AgentsPage} />
           <Route exact path='/about' component={AboutPage} />
         </Switch>
