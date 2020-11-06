@@ -1,9 +1,12 @@
 import React from 'react';
+import {
+    AgentResultsContainer
+} from './agent-results.styles';
 
 const AgentResults = () => (
-    <div className='agent-results'>
-        AGENT RESULTS
-    </div>
+    <AgentResultsContainer>
+        RESULTS
+    </AgentResultsContainer>
 );
 
 export default AgentResults;

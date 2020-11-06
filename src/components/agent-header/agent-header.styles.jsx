@@ -21,5 +21,5 @@ export const AgentSearchInputRow = styled.div`
     background: #f1f1f1;
     display: flex;
     justify-content: space-between;
-    padding: 0 25px;
+    padding: 10px;
 `;

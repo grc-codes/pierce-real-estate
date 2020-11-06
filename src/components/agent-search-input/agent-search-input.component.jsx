@@ -5,9 +5,9 @@ import {
     AgentSearchButton
 } from './agent-search-input.styles';
 
-const AgentSearchInput = () => (
+const AgentSearchInput = ({ placeholder }) => (
     <AgentSearchInputContainer>
-        <AgentSearchInputField />
+        <AgentSearchInputField placeholder={placeholder} />
         <AgentSearchButton>
             <i className='fas fa-search' />
         </AgentSearchButton>

@@ -13,8 +13,8 @@ const AgentHeader = () => (
             Find an Agent
         </AgentHeaderTitle>
         <AgentSearchInputRow>
-            <AgentSearchInput />
-            <AgentSearchInput />
+            <AgentSearchInput placeholder='Neighborhood/City/Zip' />
+            <AgentSearchInput placeholder='Agent name' />
         </AgentSearchInputRow>
         <AgentFilterOptions />
     </AgentHeaderContainer>

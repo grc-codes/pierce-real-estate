@@ -1,13 +1,23 @@
 import styled from 'styled-components';
 
 export const AgentSearchInputContainer = styled.div`
-    width: 49%;
+    width: 49.5%;
     display: flex;
-    background: blue;
+    background: #fff;
+    border: 1px solid #aeadb1;
 `;
 
 export const AgentSearchInputField = styled.input`
     width: 80%;
+    border: none;
+    padding: 5px;
+    &::placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: .9em;
+    }
+    &:focus {
+        outline: none;
+    }
 `;
 
 export const AgentSearchButton = styled.div`
@@ -17,6 +27,7 @@ export const AgentSearchButton = styled.div`
     align-items: center;
     padding: 5px;
     & .fas {
-        color: orange;
+        color: #2279ff;
+        font-size: 1.2em;
     }
 `;
