@@ -4,7 +4,7 @@ export const AgentHeaderContainer = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 25px 0;
+    padding: 25px 0 0;
 `;
 
 export const AgentHeaderTitle = styled.h3`

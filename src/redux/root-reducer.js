@@ -6,7 +6,8 @@ import agentsReducer from './agents/agents.reducer';
 
 const persistConfig = {
     key: 'root',
-    storage
+    storage,
+    blacklist: ['menu', 'agents']
 };
 
 const rootReducer = combineReducers({

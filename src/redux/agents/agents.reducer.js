@@ -1,7 +1,8 @@
 import { AgentsActionTypes } from './agents.types';
 
 const INITIAL_STATE = {
-    filterHidden: true
+    filterHidden: true,
+    sortDropdownHidden: true
 };
 
 const agentsReducer = (state=INITIAL_STATE, action) => {
@@ -10,6 +11,11 @@ const agentsReducer = (state=INITIAL_STATE, action) => {
             return {
                 ...state,
                 filterHidden: !state.filterHidden
+            };
+        case AgentsActionTypes.TOGGLE_SORT_DROPDOWN_HIDDEN:
+            return {
+                ...state,
+                sortDropdownHidden: !state.sortDropdownHidden
             };
         default:
             return state;

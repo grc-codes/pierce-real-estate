@@ -14,15 +14,6 @@ import Footer from './components/footer/footer.component';
 
 class App extends React.Component {
 
-  componentDidMount() {
-    const { mobileMenuHidden, toggleMobileMenuHidden } = this.props;
-    if(mobileMenuHidden) {
-      return;
-    } else {
-      toggleMobileMenuHidden();
-    };
-  };
-
   render() {
     return (
       <div>
