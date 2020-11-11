@@ -2,34 +2,41 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const MobileMenuContainer = styled.div`
-    width: 40%;
+    width: 100%;
     position: absolute;
     right: 0;
-    top: 70px;
+    top: 90px;
     z-index: 10;
-    height: 30vh;
+    height: 0vh;
+    background: #fff;
+    transition: height .5s ease-in-out;
+    overflow: hidden;
+    &.active {
+        height: 100vh;
+    }
+
 `;
 
 export const OptionsContainer = styled.div`
     width: 100%;
     display: flex;
-    height: 100%;
     flex-wrap: wrap;
 `;
 
 export const OptionLink = styled(Link)`
-    padding: 15px 10px;
+    padding: 20px 15px;
     width: 100%;
-    background: blue;
+    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #fff;
-    font-size: .7em;
-    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
 
     &:hover {
-        background: orange;
+        color: #4ba4db;
     }
 `;

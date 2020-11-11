@@ -15,6 +15,9 @@ import {
 const Listing = ({ imageUrl }) => (
     <ListingContainer>
         <ListingImageContainer imageUrl={imageUrl}>
+            <ForTag>
+                For Sale
+            </ForTag>
             <ListingOverlayContainer>
                 <ListingDescriptionContainer>
                     <ListingTitle>

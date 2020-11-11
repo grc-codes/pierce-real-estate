@@ -6,6 +6,9 @@ export const AgentResultContainer = styled.div`
     flex-wrap: wrap;
     margin: 0 auto 10px;
     border-bottom: 1px solid #a7a6ab;
+    &:last-of-type {
+        border-bottom: 0;
+    }
 `;
 
 export const AgentResultTopRow = styled.div`
@@ -14,19 +17,21 @@ export const AgentResultTopRow = styled.div`
     height: 150px;
     display: flex;
     padding: 15px 0;
-    background: green;
+    background: #fff;
 `;
 
 export const AgentResultImageContainer = styled.div`
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: blue;
+    background-size: cover;
+    background-position: center;
+    background-image: ${({agentImageUrl}) => `url(${agentImageUrl})`};
 `;
 
 export const AgentResultContactContainer = styled.div`
     padding: 15px 0 15px 15px;
-    background: red;
+    background: #fff;
     width: calc(100% - 120px);
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +42,7 @@ export const AgentResultContactContainer = styled.div`
 
 export const AgentResultAgentName = styled.p`
     width: 100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color: #006aff;
     font-weight: 700;

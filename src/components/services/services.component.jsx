@@ -1,6 +1,8 @@
 import React from 'react';
 import {
     ServicesContainer,
+    ServicesCTA,
+    ServicesSubtitle,
     ServicesTitle,
     ServicesTables,
     ServicesTable,
@@ -11,41 +13,46 @@ import {
 
 const Services = () => (
     <ServicesContainer>
-        <ServicesTitle>
-            Our Services
-        </ServicesTitle>
+        <ServicesCTA>
+            <ServicesSubtitle>
+                Discover a place you'll love
+            </ServicesSubtitle>
+            <ServicesTitle>
+                We have the most listings and constant updates. So you'll never miss out.
+            </ServicesTitle>
+        </ServicesCTA>
         <ServicesTables>
             <ServicesTable>
                 <ServicesIconContainer>
-                    <i className='fas fa-search-location fa-lg'></i>
+                    <i className='fas fa-home fa-lg'></i>
                 </ServicesIconContainer>
                 <ServicesTableTitle>
-                    Search Property
+                    Buy a home
                 </ServicesTableTitle>
                 <ServicesText>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit explicabo iusto molestias quas reiciendis tempore dolorem libero, unde eius earum expedita aliquid eaque amet alias provident, asperiores nulla! Soluta, eius.
+                    With over 1 million+ homes for sale available on the website, Pierce Real Estate can match you with a house you will want to call home.
                 </ServicesText>
             </ServicesTable>
             <ServicesTable>
                 <ServicesIconContainer>
-                    <i className='fas fa-chart-pie fa-lg'></i>
+                    <i className='fab fa-houzz fa-lg'></i>
                 </ServicesIconContainer>
                 <ServicesTableTitle>
-                    Asset Management
+                    Rent a home
                 </ServicesTableTitle>
                 <ServicesText>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit explicabo iusto molestias quas reiciendis tempore dolorem libero, unde eius earum expedita aliquid eaque amet alias provident, asperiores nulla! Soluta, eius.
+                    With 35+ filters and custom keyword search, Pierce Real Estate can help you easily find a home or apartment for rent that you'll love.
                 </ServicesText>
             </ServicesTable>
             <ServicesTable>
                 <ServicesIconContainer>
-                    <i className='fas fa-dollar-sign fa-lg'></i>
+                    <i className='fas fa-users fa-lg'></i>
                 </ServicesIconContainer>
                 <ServicesTableTitle>
-                    Cost Management
+                    See neighborhoods
                 </ServicesTableTitle>
                 <ServicesText>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit explicabo iusto molestias quas reiciendis tempore dolorem libero, unde eius earum expedita aliquid eaque amet alias provident, asperiores nulla! Soluta, eius.
+                    With more neighborhood insights than any other real estate website, we've captured the color and diversity of communities.
                 </ServicesText>
             </ServicesTable>
         </ServicesTables>

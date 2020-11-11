@@ -1,35 +1,19 @@
 import React from 'react';
 import {
     FooterContainer,
-    FooterTestimonialsContainer,
-    FooterTestimonialsText,
     AppStoresContainer,
     SocialContainer,
     LinksContainer,
-    FooterTestimonialsTitle,
-    FooterTestimonialsSpan,
-    HR,
     AppStoreIconContainer,
     PlayStoreIconContainer,
     FooterLinks,
     FooterLink
 } from './footer.styles';
-import { ReactComponent as AppStore } from '../../assets/app-store-1.svg';
-import { ReactComponent as PlayStore } from '../../assets/google-play-5.svg';
+import { ReactComponent as AppStore } from '../../assets/app-store.svg';
+import { ReactComponent as PlayStore } from '../../assets/google-play.svg';
 
 const Footer = () => (
     <FooterContainer>
-        <FooterTestimonialsContainer>
-            <FooterTestimonialsTitle>
-                Home Buyer Testimonials
-            </FooterTestimonialsTitle>
-            <FooterTestimonialsText>
-                "I had an amazing experience from inception to move in day. The team went above and beyond the call of duty to present me with a beautiful home. Every day, I feel like I am on vacation. When buying a new home, we all have choices. I chose Pierce Real Estate and they have made the choice right."
-            </FooterTestimonialsText>
-            <FooterTestimonialsSpan>
-                Customer Review from MONA STEELE - Morristown NJ
-            </FooterTestimonialsSpan>
-        </FooterTestimonialsContainer>
         <AppStoresContainer>
             <AppStoreIconContainer>
                 <AppStore />
@@ -50,7 +34,7 @@ const Footer = () => (
                     HOME
                 </FooterLink>
                 |
-                <FooterLink to='/listings'>
+                <FooterLink to='/search'>
                     SEARCH LISTINGS
                 </FooterLink>
                 |
@@ -58,8 +42,8 @@ const Footer = () => (
                     AGENTS
                 </FooterLink>
                 |
-                <FooterLink to='/about'>
-                    ABOUT
+                <FooterLink to='/contact'>
+                    CONTACT
                 </FooterLink>
             </FooterLinks>
             <span>

@@ -6,9 +6,11 @@ import {
 } from './mobile-menu.styles';
 import { toggleMobileMenuHidden } from '../../redux/menu/menu.actions';
 import { connect } from 'react-redux';
+import { selectMobileMenuHidden } from '../../redux/menu/menu.selectors';
+import { createStructuredSelector } from 'reselect';
 
 const MobileMenu = ({ toggleMobileMenuHidden }) => (
-    <MobileMenuContainer>
+    <MobileMenuContainer id='mobile-menu'>
         <OptionsContainer>
             <OptionLink to='/' onClick={toggleMobileMenuHidden}>
                 HOME
@@ -19,8 +21,8 @@ const MobileMenu = ({ toggleMobileMenuHidden }) => (
             <OptionLink to='/agents' onClick={toggleMobileMenuHidden}>
                 AGENTS
             </OptionLink>
-            <OptionLink to='/about' onClick={toggleMobileMenuHidden}>
-                ABOUT
+            <OptionLink to='/contact' onClick={toggleMobileMenuHidden}>
+                CONTACT
             </OptionLink>
         </OptionsContainer>
     </MobileMenuContainer>
@@ -30,4 +32,8 @@ const mapDispatchToProps = dispatch => ({
     toggleMobileMenuHidden: () => dispatch(toggleMobileMenuHidden())
 });
 
-export default connect(null, mapDispatchToProps)(MobileMenu);
+const mapStateToProps = createStructuredSelector({
+    mobileMenuHidden: selectMobileMenuHidden
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MobileMenu);

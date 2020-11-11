@@ -39,11 +39,12 @@ export const ForTag = styled.div`
     position: relative;
     top: 15px;
     left: 15px;
+    border-radius: 5px;
 `;
 
 export const ListingOverlayContainer = styled.div`
     width: 100%;
-    height: 100%;
+    height: calc(100% - 21px);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

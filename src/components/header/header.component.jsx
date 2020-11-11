@@ -1,32 +1,23 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
 import {
     HeaderContainer,
-    LogoContainer
+    LogoContainer,
+    HeaderRow
 } from './header.styles';
-import { createStructuredSelector } from 'reselect';
-import { selectMobileMenuHidden } from '../../redux/menu/menu.selectors';
 import MenuIcon from '../menu-icon/menu-icon.component';
 import MobileMenu from '../mobile-menu/mobile-menu.component';
-import { connect } from 'react-redux';
 
-
-const Header = ({ mobileMenuHidden }) => (
+const Header = () => (
     <HeaderContainer>
-        <LogoContainer to='/'>
-            <Logo className='logo' />
-        </LogoContainer>
-        <MenuIcon />
-        {
-            (mobileMenuHidden) ?
-            null :
-            <MobileMenu />
-        }
+        <HeaderRow>
+            <LogoContainer to='/'>
+                <p>Pierce Real Estate</p>
+            </LogoContainer>
+            <MenuIcon />
+        </HeaderRow>
+        <MobileMenu />
     </HeaderContainer>
 );
 
-const mapStateToProps = createStructuredSelector({
-    mobileMenuHidden: selectMobileMenuHidden
-});
 
-export default connect(mapStateToProps)(Header);
+export default (Header);

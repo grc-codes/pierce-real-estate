@@ -20,9 +20,7 @@ import {
 const AgentResult = ({ agentImageUrl }) => (
     <AgentResultContainer>
         <AgentResultTopRow>
-            <AgentResultImageContainer agentImageUrl={agentImageUrl}>
-                
-            </AgentResultImageContainer>
+            <AgentResultImageContainer agentImageUrl='https://photos.zillowstatic.com/h_g/IStgc5j7cgerzr1000000000.jpg'/>
             <AgentResultContactContainer>
                 <AgentResultAgentName>
                     Griffith Home Team

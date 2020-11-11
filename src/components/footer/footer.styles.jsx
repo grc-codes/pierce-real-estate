@@ -119,16 +119,19 @@ export const SocialContainer = styled.div`
 
 export const LinksContainer = styled.div`
     width: 100%;
-    padding: 20px;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
+    color: #1c1d21;
     
     span {
         font-family: 'Roboto', sans-serif;
-        font-size: .8em;
+        font-size: 1em;
         text-align: center;
-        color: #232323;
+        color: #1c1d21;
+        opacity: .6;
         text-transform: uppercase;
+        font-weight: 700;
     }
 `;
 
@@ -137,14 +140,16 @@ export const FooterLinks = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: .5em;
+    margin-bottom: 1.5em;
 `;
 
 export const FooterLink = styled(Link)`
-    color: #232323;
+    color: #1c1d21;
+    opacity: .6;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: .8em;
+    font-size: 1em;
+    font-weight: 700;
     margin: 0 .5em;
     text-transform: uppercase;
     &:first-of-type {

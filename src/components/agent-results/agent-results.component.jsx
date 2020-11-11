@@ -15,7 +15,7 @@ const AgentResults = ({ sortDropdownHidden, toggleSortDropdown }) => (
     <AgentResultsContainer>
         <AgentSortContainer>
             <AgentSortText onClick={toggleSortDropdown}>
-                Sort By: <span>Most Recent Sales</span> <i className='fas fa-sort-down' />
+                Sort By: <span>Most Recent Sales</span> <i className={`fas ${sortDropdownHidden ? `fa-sort-down` : `fa-sort-up`}`} />
             </AgentSortText>
         </AgentSortContainer>
         {

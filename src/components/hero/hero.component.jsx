@@ -1,31 +1,33 @@
 import React from 'react';
 import {
     HeroContainer,
+    HeroGradientContainer,
     HeroImageContainer,
     HeroTextContainer,
-    NeighborhoodText,
-    CityText,
-    RightArrowContainer,
-    LeftArrowContainer
+    HeroTitle,
+    HeroSubtitle,
+    HeroButton,
+    HeroLink
 } from './hero.styles';
 
 const Hero = () => (
     <HeroContainer>
-        <HeroImageContainer imageUrl='https://i.ibb.co/phdZ7hM/toa-heftiba-nr-Sz-RUWqmo-I-unsplash.jpg'>
-            <HeroTextContainer>
-                <NeighborhoodText>
-                    Hidden Hills
-                </NeighborhoodText>
-                <CityText>
-                    Los Angeles
-                </CityText>
-            </HeroTextContainer>
-            <LeftArrowContainer>
-                <i className='fas fa-caret-left'></i>
-            </LeftArrowContainer>
-            <RightArrowContainer>
-                <i className='fas fa-caret-right'></i>
-            </RightArrowContainer>
+        <HeroImageContainer imageUrl='../../assets/hero.jpg'>
+            <HeroGradientContainer>
+                <HeroTextContainer>
+                    <HeroTitle>
+                        Reimagine home
+                    </HeroTitle>
+                    <HeroSubtitle>
+                        We'll help you find a place you'll love.
+                    </HeroSubtitle>
+                    <HeroButton>
+                        <HeroLink to='/search'>
+                            Are You Ready?
+                        </HeroLink>
+                    </HeroButton>
+                </HeroTextContainer>
+            </HeroGradientContainer>
         </HeroImageContainer>
     </HeroContainer>
 );

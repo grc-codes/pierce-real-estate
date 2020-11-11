@@ -13,7 +13,7 @@ const AgentFilterOptions = ({ filterHidden, toggleFilterHidden }) => (
     <AgentFilterOptionsContainer>
         <AgentFilterOptionsBtn onClick={toggleFilterHidden}>
             FILTER OPTIONS
-            <i className={`fas ${filterHidden ? `fa-chevron-down` : `fa-chevron-up`}`}></i>
+            <i className={`fas ${filterHidden ? `fa-chevron-down` : `fa-chevron-up`}`} />
         </AgentFilterOptionsBtn>
         {
             (filterHidden) ?

@@ -1,56 +1,53 @@
 import styled from 'styled-components';
 
 export const FeaturedContainer = styled.div`
-    padding: 60px 0;
-    background: #F85757;
     width: 100%;
-`;
-
-export const FeaturedTitle = styled.h2`
-    font-family: 'Roboto', sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 1em;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const FeaturedListingsContainer = styled.div`
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
 `;
 
 export const FeaturedListingContainer = styled.div`
     width: 100%;
-    height: 300px;
-    background: red;
-    margin-bottom: 15px;
-    &:last-of-type {
-        margin-bottom: 0;
-    }
+    height: 500px;
+    background-position: center center;
+    background-image: ${({imageUrl}) => `url(${imageUrl})`};
+    background-size: cover;
+`;
+
+export const FeaturedListingGradientContainer = styled.div`
+    height: 100%;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0.500437675070028) 0%, rgba(0,0,0,0.500437675070028) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.500437675070028) 0%, rgba(0,0,0,0.500437675070028) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.500437675070028) 0%, rgba(0,0,0,0.500437675070028) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    padding: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-image: ${({imageUrl}) => `url(${imageUrl})`};
+    justify-content: center;
 `;
 
-export const FeaturedListingCity = styled.h3`
+export const FeaturedListingCity = styled.h4`
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    font-size: 1.5em;
-    margin-bottom: .5em;
-    width: 100%;
-    text-align: center;
+    opacity: .6;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 `;
 
-export const FeaturedListingPrice = styled.p`
-    font-family: 'Roboto', sans-serif;
+export const FeaturedListingPrice = styled.h2`
+    font-family: 'Raleway', sans-serif;
     color: #fff;
-    font-size: 1em;
-    width: 100%;
-    text-align: center;
+    font-size: 2.2em;
+    font-weight: 700;
 `;
