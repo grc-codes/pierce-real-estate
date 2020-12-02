@@ -1,19 +1,12 @@
 import React from 'react';
 import {
-    SearchResultsContainer,
-    SearchResultsTotalContainer,
-    SearchResultsTotalText
+    SearchResultsContainer
 } from './search-results.styles';
-import Listings from '../listings/listings.component';
+import ListingsContainer from '../listings/listings.container';
 
 const SearchResults = () => (
     <SearchResultsContainer>
-        <SearchResultsTotalContainer>
-            <SearchResultsTotalText>
-                <span>53</span> Results Found
-            </SearchResultsTotalText>
-        </SearchResultsTotalContainer>
-        <Listings />
+        <ListingsContainer />
     </SearchResultsContainer>
 );
 

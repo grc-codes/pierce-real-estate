@@ -6,11 +6,19 @@ export const ContactInformationContainer = styled.div`
     background-image: ${({backgroundImageUrl}) => `url(${backgroundImageUrl})`};
     background-size: cover;
     background-position: center center;
+    @media screen and (min-width: 600px) {
+        display: flex;
+        justify-content: flex-end;
+    }
 `;
 
 export const ContactInformationBox = styled.div`
     padding: 0 20px;
     width: 100%;
+    @media screen and (min-width: 600px) {
+        padding: 0 10%;
+        width: 60%;
+    }
 `;
 
 export const ContactInformationBoxContainer = styled.div`
@@ -59,7 +67,7 @@ export const ContactInformationPhoneText = styled.p`
     margin-bottom: 1.5em;
     line-height: 1.5;
     a {
-        color: #ea2f46;
+        color: #4ba4db;
     }
 `;
 
@@ -91,7 +99,7 @@ export const ContactInformationButton = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background: #ea2f46;
+    background: #4ba4db;
     &:hover {
         cursor: pointer;
     }

@@ -1,16 +1,34 @@
 import React from 'react';
 import {
-    ListingsContainer
+    ListingsContainer,
+    EmptyListingMessage
 } from './listings.styles';
 import Listing from '../listing/listing.component';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectResults } from '../../redux/listings/listings.selectors';
 
-const Listings = () => (
+const Listings = ({ results }) => (
     <ListingsContainer>
-        <Listing imageUrl='../../assets/listing/listing-1.jpeg'/>
-        <Listing imageUrl='../../assets/listing/listing-2.jpeg' />
-        <Listing imageUrl='../../assets/listing/listing-3.jpeg' />
-        <Listing imageUrl='../../assets/listing/listing-4.jpeg' />
+        {
+            (results.length !== 0) ?
+            results
+            .filter(({property_id, ...otherProps}, idx) => idx < 10)
+            .map(({ property_id, ...otherProps }) => (
+                <Listing key={property_id} property_id={property_id} {...otherProps} />
+            ))
+            :
+            (
+                <EmptyListingMessage>
+                    There are no results for your search.<br/> Please try using another zip code or city.
+                </EmptyListingMessage>
+            )
+        }
     </ListingsContainer>
 );
 
-export default Listings;
+const mapStateToProps = createStructuredSelector({
+    results: selectResults
+});
+
+export default connect(mapStateToProps)(Listings);

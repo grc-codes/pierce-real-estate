@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const TestimonialContainer = styled.div`
-    padding: 120px 20px;
+    padding: 120px 10%;
     width: 100%;
+    background: #1c1d21;
 `;
 
 export const TestimonialText = styled.p`
     font-family: 'Raleway', sans-serif;
     font-size: 1.25em;
-    color: #1c1d21;
+    color: #fff;
     line-height: 1.5;
     margin-bottom: 1.6em;
 `;

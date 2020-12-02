@@ -18,9 +18,6 @@ const MobileMenu = ({ toggleMobileMenuHidden }) => (
             <OptionLink to='/search' onClick={toggleMobileMenuHidden}>
                 SEARCH
             </OptionLink>
-            <OptionLink to='/agents' onClick={toggleMobileMenuHidden}>
-                AGENTS
-            </OptionLink>
             <OptionLink to='/contact' onClick={toggleMobileMenuHidden}>
                 CONTACT
             </OptionLink>

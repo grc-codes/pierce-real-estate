@@ -31,14 +31,14 @@ export const HeroTextContainer = styled.div`
     display: flex;
     padding: 0 10%;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 `;
 
 export const HeroTitle = styled.h2`
     font-family: 'Raleway', sans-serif;
     font-size: 2.25em;
     font-weight: 700;
-    color: #4ba4db;
+    color: #fff;
     white-space: nowrap;
     margin-bottom: .6em;
     text-align: center;
@@ -52,11 +52,11 @@ export const HeroSubtitle = styled.h3`
     color: #fff;
     text-align: center;
     line-height: 1.5;
-    margin-bottom: auto;
+    margin-bottom: 1.25em;
 `;
 
 export const HeroButton = styled.div`
-    padding: 0 30px;
+    padding: 25px 30px;
     height: 38px;
     width: 200px;
     display: flex;
@@ -64,6 +64,8 @@ export const HeroButton = styled.div`
     align-items: center;
     border-radius: 5px;
     background: #4ba4db;
+    min-width: 200px;
+    margin: 0 auto;
     &:hover {
         cursor: pointer;
     }

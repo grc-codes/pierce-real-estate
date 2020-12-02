@@ -35,11 +35,7 @@ const Footer = () => (
                 </FooterLink>
                 |
                 <FooterLink to='/search'>
-                    SEARCH LISTINGS
-                </FooterLink>
-                |
-                <FooterLink to='/agents'>
-                    AGENTS
+                    LISTINGS
                 </FooterLink>
                 |
                 <FooterLink to='/contact'>

@@ -1,37 +1,31 @@
 import React from 'react';
 import {
     SearchHeaderContainer,
-    SearchHeaderFilterButton,
-    SearchHeaderFiltersContainer,
-    SearchHeaderInput,
     SearchHeaderInputButton,
-    SearchHeaderInputContainer,
-    SearchHeaderFilterButtons,
-    SearchHeaderMoreFilters
+    SearchHeaderInputContainer
 } from './search-header.styles';
+import { connect } from 'react-redux';
+import { searchClicked } from '../../redux/listings/listings.actions';
+import SearchHeaderInput from '../search-header-input/search-header-input.component';
 
-const SearchHeader = () => (
-    <SearchHeaderContainer>
-        <SearchHeaderInputContainer>
-            <SearchHeaderInput placeholder='Address, neighborhood, city, ZIP' />
-            <SearchHeaderInputButton>
-                <i className='fas fa-search'></i>
-            </SearchHeaderInputButton>
-        </SearchHeaderInputContainer>
-        <SearchHeaderFiltersContainer>
-            <SearchHeaderFilterButtons>
-                <SearchHeaderFilterButton>
-                    Home
-                </SearchHeaderFilterButton>
-                <SearchHeaderFilterButton>
-                    Price
-                </SearchHeaderFilterButton>
-            </SearchHeaderFilterButtons>
-            <SearchHeaderMoreFilters>
-                Filters
-            </SearchHeaderMoreFilters>
-        </SearchHeaderFiltersContainer>
-    </SearchHeaderContainer>
-);
+class SearchHeader extends React.Component {
+    render() {
+        const { searchClicked } = this.props;
+        return (
+            <SearchHeaderContainer>
+                <SearchHeaderInputContainer>
+                    <SearchHeaderInput />
+                    <SearchHeaderInputButton onClick={() => {searchClicked(document.getElementById('search-input').value)}}>
+                        <i className='fas fa-search' />
+                    </SearchHeaderInputButton>
+                </SearchHeaderInputContainer>
+            </SearchHeaderContainer>
+        );
+    };
+};
 
-export default SearchHeader;
+const mapDispatchToProps = dispatch => ({
+    searchClicked: (api_input) => dispatch(searchClicked(api_input))
+});
+
+export default connect(null, mapDispatchToProps)(SearchHeader);

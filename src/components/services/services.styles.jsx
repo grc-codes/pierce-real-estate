@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ServicesContainer = styled.div`
-    padding: 80px 20px;
+    padding: 80px 10%;
     background: #1C1D21;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,12 @@ export const ServicesTables = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 600px) {
+        display: grid;
+        flex-direction: unset;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+    }
 `;
 
 export const ServicesTable = styled.div`

@@ -6,6 +6,9 @@ export const ContactHeaderContainer = styled.div`
     padding: 100px 20px 60px;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 600px) {
+        padding: 100px 10% 60px;
+    }
 `;
 
 export const ContactTitle = styled.h2`
@@ -15,6 +18,12 @@ export const ContactTitle = styled.h2`
     font-weight: 700;
     color: #1c1d21;
     margin-bottom: .5em;
+
+    @media screen and (min-width: 600px) {
+        font-size: 3.5em;
+        font-weight: 900;
+        margin-bottom: .4em;
+    }
 `;
 
 export const ContactSubtitle = styled.h4`
@@ -25,6 +34,9 @@ export const ContactSubtitle = styled.h4`
     color: #1c1d21;
     line-height: 1.5;
     margin-bottom: 1em;
+    @media screen and (min-width: 600px) {
+        opacity: .6;
+    }
 `;
 
 export const ContactEmailButton = styled.div`
@@ -35,7 +47,7 @@ export const ContactEmailButton = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background: #ea2f46;
+    background: #4ba4db;
     &:hover {
         cursor: pointer;
     }

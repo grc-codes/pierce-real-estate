@@ -1,12 +1,37 @@
 import React from 'react';
-import SearchHeader from '../../components/search-header/search-header.component';
-import SearchResults from '../../components/search-results/search-results.component';
+import SearchOverview from '../../components/search-overview/search-overview.component';
+import { Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchListingsStartAsync } from '../../redux/listings/listings.actions';
+import { createStructuredSelector } from 'reselect';
+import { selectInput } from '../../redux/listings/listings.selectors';
 
-const SearchPage = () => (
-    <div className='search-page'>
-        <SearchHeader />
-        <SearchResults />
-    </div>
-);
+class SearchPage extends React.Component {
+    componentDidMount() {
+        const { fetchListingsStartAsync, input } = this.props;
+        fetchListingsStartAsync(input);
+    };
 
-export default SearchPage;
+    render() {
+        const { match } = this.props;
+        return (
+            <div className='search-page'>
+                <Route
+                    exact
+                    path={`${match.path}`}
+                    component={SearchOverview}
+                />
+            </div>
+        );
+    };
+};
+
+const mapDispatchToProps = dispatch => ({
+    fetchListingsStartAsync: (input) => dispatch(fetchListingsStartAsync(input))
+});
+
+const mapStateToProps = createStructuredSelector({
+    input: selectInput
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

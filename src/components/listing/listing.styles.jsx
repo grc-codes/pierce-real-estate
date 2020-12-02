@@ -13,6 +13,10 @@ export const ListingContainer = styled.div`
     &:last-of-type {
         margin-bottom: 0;
     }
+    
+    @media screen and (min-width: 600px) {
+        height: 400px;
+    }
 `;
 
 export const ListingImageContainer = styled.div`
@@ -24,8 +28,19 @@ export const ListingImageContainer = styled.div`
     border-radius: 5px;
 `;
 
+export const ListingGradientContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.4) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.4) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.4) 100%);
+    border-radius: 5px;
+`;
+
+
 export const ForTag = styled.div`
-    width: 65px;
+    width: 100px;
     background: #fdc125;
     color: #fff;
     text-transform: uppercase;
@@ -34,12 +49,12 @@ export const ForTag = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 5px 10px;
     font-weight: 600;
     position: relative;
     top: 15px;
     left: 15px;
-    border-radius: 5px;
+    display: inline;
 `;
 
 export const ListingOverlayContainer = styled.div`
@@ -55,21 +70,28 @@ export const ListingDescriptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 60%;
+    white-space: nowrap;
 `;
 
 
 export const ListingPricingContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     width: 30%;
+    white-space: nowrap;
 `;
 
 export const ListingTitle = styled.h3`
     font-family: 'Raleway', sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: .3em;
+    @media screen and (min-width: 600px) {
+        font-size: 1.2em;
+        margin-bottom: .5em;
+    }
 `;
 
 
@@ -82,6 +104,13 @@ export const ListingLocationText = styled.p`
         font-size: .7em;
         margin-right: 5px;
     }
+    @media screen and (min-width: 600px) {
+        font-size: 1em;
+        & .fas {
+            font-size: .9em;
+            margin-right: 8px;
+        }
+    }
 `;
 
 export const ListingPriceText = styled.h3`
@@ -89,7 +118,12 @@ export const ListingPriceText = styled.h3`
     font-size: 1.1em;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: .3em;
+
+    @media screen and (min-width: 600px) {
+        font-size: 1.2em;
+        margin-bottom: .5em;
+    }
 `;
 
 export const ListingRatingText = styled.p`
@@ -101,5 +135,13 @@ export const ListingRatingText = styled.p`
         font-size: .8em;
         margin-right: 5px;
         color: #fac917;
+    }
+
+    @media screen and (min-width: 600px) {
+        font-size: 1em;
+        & .fas {
+            font-size: 1em;
+            margin-right: 7px;
+        }
     }
 `;

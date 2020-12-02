@@ -5,7 +5,11 @@ export const HeaderContainer = styled.div`
     height: 90px;
     width: 100%;
     background: #fff;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.15);
+    z-index: 999;
+    position: relative;
 `;
 
 export const HeaderRow = styled.div`

@@ -1,9 +1,11 @@
 import ListingsActionTypes from './listings.types';
 
 const INITIAL_STATE = {
-    listings: null,
+    results: null,
     isFetching: false,
-    errorMessage: undefined
+    errorMessage: undefined,
+    input: 'new york ny',
+    api_input: 'new york ny'
 };
 
 const listingsReducer = (state=INITIAL_STATE, action) => {
@@ -17,13 +19,24 @@ const listingsReducer = (state=INITIAL_STATE, action) => {
             return {
                 ...state,
                 isFetching: false,
-                listings: action.payload
+                results: action.payload,
+                filteredResults: action.payload
             };
         case ListingsActionTypes.FETCH_LISTINGS_FAILURE:
             return {
                 ...state,
                 isFetching: false,
                 errorMessage: action.payload 
+            };
+        case ListingsActionTypes.STORE_INPUT:
+            return {
+                ...state,
+                input: action.payload
+            };
+        case ListingsActionTypes.STORE_API_INPUT:
+            return {
+                ...state,
+                api_input: action.payload
             };
         default:
             return state;
