@@ -93,17 +93,23 @@ export const ContactInformationHoursText = styled.p`
 
 export const ContactInformationButton = styled.div`
     width: 150px;
-    padding: 0 30px;
-    height: 38px;
+    padding: 10px 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     background: #4ba4db;
+    border: 2px solid #4ba4db;
     &:hover {
         cursor: pointer;
+        background: #fff;
+        & a {
+            color: #4ba4db;
+        }
     }
     & a {
+        width: 100%;
+        height: 100%;
         color: #fff;
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
@@ -112,5 +118,8 @@ export const ContactInformationButton = styled.div`
         letter-spacing: .09em;
         text-transform: uppercase;
         white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `;

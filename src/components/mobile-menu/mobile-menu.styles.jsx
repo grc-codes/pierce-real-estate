@@ -24,7 +24,7 @@ export const OptionsContainer = styled.div`
 `;
 
 export const OptionLink = styled(Link)`
-    padding: 20px 15px;
+    padding: 40px;
     width: 100%;
     background: #fff;
     display: flex;
@@ -32,8 +32,8 @@ export const OptionLink = styled(Link)`
     align-items: center;
     text-decoration: none;
     color: #000;
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 900;
     font-family: 'Raleway', sans-serif;
 
     &:hover {

@@ -24,7 +24,7 @@ function turnInputToParams(input) {
             };
             return params;
         } else {
-            console.log('ZipCode is wrong');
+            
         }
     }
 }

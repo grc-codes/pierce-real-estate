@@ -39,7 +39,7 @@ const ContactInformation = () => (
                     9AM to 5PM PST
                 </ContactInformationHoursText>
                 <ContactInformationButton>
-                    <a href='#'>Get in Touch</a>
+                    <a href='mailto:grc.codes@gmail.com?subject=Let Me Hire You&body=Hi, I was very impressed with your site. I would like to hire you!'>Get in Touch</a>
                 </ContactInformationButton>
             </ContactInformationBoxContainer>
         </ContactInformationBox>

@@ -8,8 +8,15 @@ export const HeaderContainer = styled.div`
     -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.15);
     box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.15);
-    z-index: 999;
+    z-index: 9990;
     position: relative;
+`;
+
+export const HeaderWrapper = styled.div`
+    @media screen and (min-width: 1024px) {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 `;
 
 export const HeaderRow = styled.div`

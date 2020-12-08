@@ -7,11 +7,20 @@ import {
     HeroTitle,
     HeroSubtitle,
     HeroButton,
-    HeroLink
+    HeroLink,
+    HeroDesktopImageContainer,
+    HeroDesktopTextContainer,
+    HeroDesktopBackdrop,
+    HeroDesktopTitle,
+    HeroDesktopSubtitle,
+    HeroDesktopButton,
+    HeroDesktopLink,
+    HeroDesktopText
 } from './hero.styles';
 
 const Hero = () => (
     <HeroContainer>
+        <HeroDesktopImageContainer imageUrl='../../assets/hero.jpg' />
         <HeroImageContainer imageUrl='../../assets/hero.jpg'>
             <HeroGradientContainer>
                 <HeroTextContainer>
@@ -29,6 +38,22 @@ const Hero = () => (
                 </HeroTextContainer>
             </HeroGradientContainer>
         </HeroImageContainer>
+        <HeroDesktopTextContainer>
+            <HeroDesktopBackdrop />
+            <HeroDesktopText>
+                <HeroDesktopTitle>
+                    Reimagine home
+                </HeroDesktopTitle>
+                <HeroDesktopSubtitle>
+                    We'll help you find a place you'll love.
+                </HeroDesktopSubtitle>
+                <HeroDesktopButton>
+                    <HeroDesktopLink to='/search'>
+                        Are You Ready?
+                    </HeroDesktopLink>
+                </HeroDesktopButton>
+            </HeroDesktopText>
+        </HeroDesktopTextContainer>
     </HeroContainer>
 );
 

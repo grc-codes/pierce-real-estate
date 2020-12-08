@@ -11,4 +11,8 @@ export const MenuIconContainer = styled.div`
     & .fas {
         font-size: 1.8em;
     }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 `;

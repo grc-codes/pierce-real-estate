@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const ListingContainer = styled.div`
     width: 100%;
-    height: 200px;
-    margin-bottom: 1.5em;
-    border-radius: 5px;
+    height: 300px;
+    margin-bottom: 10px;
+    border-radius: 20px;
     background: lightgray;
     color: #fff;
     display: flex;
@@ -16,6 +16,9 @@ export const ListingContainer = styled.div`
     
     @media screen and (min-width: 600px) {
         height: 400px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 `;
 
@@ -25,7 +28,7 @@ export const ListingImageContainer = styled.div`
     background-size: cover;
     background-position: center;
     background-image: ${({imageUrl}) => `url(${imageUrl})`};
-    border-radius: 5px;
+    border-radius: 20px;
 `;
 
 export const ListingGradientContainer = styled.div`
@@ -35,7 +38,10 @@ export const ListingGradientContainer = styled.div`
     background: -moz-linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.4) 100%);
     background: -webkit-linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.4) 100%);
     background: linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.4) 100%);
-    border-radius: 5px;
+    border-radius: 20px;
+    &:hover {
+        background: unset;
+    }
 `;
 
 
@@ -55,6 +61,16 @@ export const ForTag = styled.div`
     top: 15px;
     left: 15px;
     display: inline;
+
+    @media screen and (min-width: 600px) {
+        top: 20px;
+        left: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: 25px;
+        left: 25px;
+    }
 `;
 
 export const ListingOverlayContainer = styled.div`
@@ -64,6 +80,14 @@ export const ListingOverlayContainer = styled.div`
     justify-content: space-between;
     align-items: flex-end;
     padding: 10px;
+
+    @media screen and (min-width: 600px) {
+        padding: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding: 25px;
+    }
 `;
 
 export const ListingDescriptionContainer = styled.div`
@@ -84,7 +108,7 @@ export const ListingPricingContainer = styled.div`
 
 export const ListingTitle = styled.h3`
     font-family: 'Raleway', sans-serif;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: 600;
     color: #fff;
     margin-bottom: .3em;
@@ -97,7 +121,7 @@ export const ListingTitle = styled.h3`
 
 export const ListingLocationText = styled.p`
     font-family: 'Raleway', sans-serif;
-    font-size: .8em;
+    font-size: .7em;
     font-weight: 300;
     display: flex;
     & .fas {
@@ -115,13 +139,13 @@ export const ListingLocationText = styled.p`
 
 export const ListingPriceText = styled.h3`
     font-family: 'Raleway', sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     color: #fff;
     margin-bottom: .3em;
 
     @media screen and (min-width: 600px) {
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-bottom: .5em;
     }
 `;
@@ -129,7 +153,7 @@ export const ListingPriceText = styled.h3`
 export const ListingRatingText = styled.p`
     display: flex;
     font-family: 'Raleway', sans-serif;
-    font-size: .8em;
+    font-size: .7em;
     font-weight: 300;
     & .fas {
         font-size: .8em;
@@ -138,7 +162,7 @@ export const ListingRatingText = styled.p`
     }
 
     @media screen and (min-width: 600px) {
-        font-size: 1em;
+        font-size: .8em;
         & .fas {
             font-size: 1em;
             margin-right: 7px;

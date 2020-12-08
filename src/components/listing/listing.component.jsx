@@ -14,7 +14,7 @@ import {
 } from './listing.styles';
 
 const Listing = ({ property_id, thumbnail, client_display_flags, address, price }) => (
-    <ListingContainer onClick={() => console.log(property_id)}>
+    <ListingContainer>
         <ListingImageContainer imageUrl={thumbnail}>
             <ListingGradientContainer>
                 {

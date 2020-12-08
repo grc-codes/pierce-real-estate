@@ -6,12 +6,12 @@ import {
 import Listing from '../listing/listing.component';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { selectResults } from '../../redux/listings/listings.selectors';
+import { selectError, selectResults } from '../../redux/listings/listings.selectors';
 
-const Listings = ({ results }) => (
+const Listings = ({ results, error }) => (
     <ListingsContainer>
         {
-            (results.length !== 0) ?
+            (results.length !== 0 && error === undefined) ?
             results
             .filter(({property_id, ...otherProps}, idx) => idx < 10)
             .map(({ property_id, ...otherProps }) => (
@@ -28,7 +28,8 @@ const Listings = ({ results }) => (
 );
 
 const mapStateToProps = createStructuredSelector({
-    results: selectResults
+    results: selectResults,
+    error: selectError
 });
 
 export default connect(mapStateToProps)(Listings);

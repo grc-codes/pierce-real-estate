@@ -13,13 +13,13 @@ const MobileMenu = ({ toggleMobileMenuHidden }) => (
     <MobileMenuContainer id='mobile-menu'>
         <OptionsContainer>
             <OptionLink to='/' onClick={toggleMobileMenuHidden}>
-                HOME
+                Home
             </OptionLink>
             <OptionLink to='/search' onClick={toggleMobileMenuHidden}>
-                SEARCH
+                Search
             </OptionLink>
             <OptionLink to='/contact' onClick={toggleMobileMenuHidden}>
-                CONTACT
+                Contact
             </OptionLink>
         </OptionsContainer>
     </MobileMenuContainer>

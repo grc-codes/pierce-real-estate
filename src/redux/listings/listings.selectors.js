@@ -21,3 +21,8 @@ export const selectInput = createSelector(
     [selectListings],
     (listings) => listings.api_input
 );
+
+export const selectError = createSelector(
+    [selectListings],
+    (listings) => listings.errorMessage
+);

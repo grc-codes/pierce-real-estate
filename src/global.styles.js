@@ -31,9 +31,14 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html {
+        overflow-x: hidden;
+    }
+
     body {
         line-height: 1;
         margin: 0;
+        overflow: hidden;
     }
 
     ol, ul {

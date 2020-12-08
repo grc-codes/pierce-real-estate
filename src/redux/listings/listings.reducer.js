@@ -19,8 +19,7 @@ const listingsReducer = (state=INITIAL_STATE, action) => {
             return {
                 ...state,
                 isFetching: false,
-                results: action.payload,
-                filteredResults: action.payload
+                results: action.payload
             };
         case ListingsActionTypes.FETCH_LISTINGS_FAILURE:
             return {

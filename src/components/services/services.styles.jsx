@@ -3,13 +3,32 @@ import styled from 'styled-components';
 export const ServicesContainer = styled.div`
     padding: 80px 10%;
     background: #1C1D21;
+    width: 100%;
+    z-index: 20;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    position: relative;
+
+    @media screen and (min-width: 1200px) {
+        padding: 80px 0;
+    }
+`;
+
+export const ServicesDesktopWrapper = styled.div`
+    @media screen and (min-width: 1024px) {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+    }
 `;
 
 export const ServicesCTA = styled.div`
     width: 100%;
+    
+    @media screen and (min-width: 1024px) {
+        align-self: center;
+        margin-right: 10%;
+    }
 `;
 
 export const ServicesSubtitle = styled.h4`

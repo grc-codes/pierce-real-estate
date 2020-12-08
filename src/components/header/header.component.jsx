@@ -2,20 +2,25 @@ import React from 'react';
 import {
     HeaderContainer,
     LogoContainer,
-    HeaderRow
+    HeaderRow,
+    HeaderWrapper
 } from './header.styles';
 import MenuIcon from '../menu-icon/menu-icon.component';
 import MobileMenu from '../mobile-menu/mobile-menu.component';
+import MenuLinks from '../menu-links/menu-links.component';
 
 const Header = () => (
     <HeaderContainer>
-        <HeaderRow>
-            <LogoContainer to='/'>
-                <p>Pierce Real Estate</p>
-            </LogoContainer>
-            <MenuIcon />
-        </HeaderRow>
-        <MobileMenu />
+        <HeaderWrapper>
+            <HeaderRow>
+                <LogoContainer to='/'>
+                    <p>Pierce Real Estate</p>
+                </LogoContainer>
+                <MenuIcon />
+                <MenuLinks />
+            </HeaderRow>
+            <MobileMenu />
+        </HeaderWrapper>
     </HeaderContainer>
 );
 

@@ -2,20 +2,18 @@ import styled from 'styled-components';
 
 export const SearchHeaderContainer = styled.div`
     width: 100%;
-    background: #fff;
     padding: 25px 0;
     display: flex;
     flex-direction: column;
 `;
 
 export const SearchHeaderInputContainer = styled.div`
-    background: #fff;
     display: flex;
     justify-content: center;
     width: 90%;
     padding: 5px;
     margin: 0 auto;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #e6e6e6;
 `;
 
 export const SearchHeaderInputButton = styled.button`
@@ -28,6 +26,7 @@ export const SearchHeaderInputButton = styled.button`
     align-items: center;
     & .fas {
         font-size: 1.5em;
+        color: darkgrey;
     }
 
     &:focus {

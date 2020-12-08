@@ -15,7 +15,7 @@ const ContactHeader = () => (
             Leave us a little info, and we'll be in touch.
         </ContactSubtitle>
         <ContactEmailButton>
-            <a href='#'>Email Us <i className='fas fa-arrow-right' /></a>
+            <a href='mailto:grc.codes@gmail.com?subject=Let Me Hire You&body=Hi, I was very impressed with your site. I would like to hire you!'>Email Us <i className='fas fa-arrow-right' /></a>
         </ContactEmailButton>
     </ContactHeaderContainer>
 );

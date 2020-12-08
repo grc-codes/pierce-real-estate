@@ -8,13 +8,29 @@ export const FooterContainer = styled.div`
     width: 100%;
     flex-direction: column;
     align-items: center;
+`;
 
+export const FooterDesktopWrapper = styled.div`
+    @media screen and (min-width: 1024px) {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    display: unset;
+    margin: unset;
 `;
 
 export const HR = styled.hr`
     width: 80%;
     border: 2px solid #dfdfdf;
     margin: 0;
+
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+    }
 `;
 
 export const FooterTestimonialsContainer = styled.div`
@@ -60,15 +76,17 @@ export const FooterTestimonialsSpan = styled.span`
 `;
 
 export const AppStoresContainer = styled.div`
-    width: 80%;
+    width: 100%;
     border-bottom: 1px solid #dfdfdf;
     border-top: 1px solid #dfdfdf;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
-
     overflow: hidden;
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+    }
 `;
 
 export const AppStoreIconContainer = styled.div`
@@ -152,6 +170,12 @@ export const FooterLink = styled(Link)`
     font-weight: 700;
     margin: 0 .5em;
     text-transform: uppercase;
+    transition: all .3s ease-in-out;
+    &:hover {
+        cursor: pointer;
+        color: #4ba4db;
+        opacity: 1;
+    }
     &:first-of-type {
         margin-left: 0;
     }
