@@ -18,13 +18,14 @@ export const fetchListingsFailure = (errorMessage) => ({
 
 export const fetchListingsStartAsync = (input) => {
     return dispatch => {
+        const API_KEY = process.env.REACT_APP_RE_KEY;
         const params = turnInputToParams(input);
         const options = {
             method: 'GET',
             url: 'https://realtor.p.rapidapi.com/properties/v2/list-for-sale',
             params: params,
             headers: {
-                'x-rapidapi-key': process.env.API_KEY,
+                'x-rapidapi-key': API_KEY,
                 'x-rapidapi-host': 'realtor.p.rapidapi.com'
             }
         };

@@ -28,4 +28,5 @@ export const EmptyListingMessage = styled.div`
     line-height: 1.5;
     color: #1c1d1e;
     text-align: center;
+    margin: 0 auto;
 `;
