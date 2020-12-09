@@ -24,7 +24,7 @@ export const fetchListingsStartAsync = (input) => {
             url: 'https://realtor.p.rapidapi.com/properties/v2/list-for-sale',
             params: params,
             headers: {
-                'x-rapidapi-key': process.env.REACT_APP_REAL_ESTATE_API_KEY,
+                'x-rapidapi-key': process.env.API_KEY,
                 'x-rapidapi-host': 'realtor.p.rapidapi.com'
             }
         };

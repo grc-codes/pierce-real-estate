@@ -11,7 +11,6 @@ const SearchHeaderInput = ({ searchChange, searchClicked }) => (
         placeholder={`(New York City NY) or (10040)`}
         onChange={searchChange}
         onKeyDown={(e) => {
-            console.log(e.key);
             const input = document.getElementById('search-input');
             if (e.key === "Enter") {
                 searchClicked(input.value);
